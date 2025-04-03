@@ -7,6 +7,7 @@ A simple Nest.js server app that displays a stock dashboard
 
 ```bash
 $ git clone https://github.com/baika654/nestjs-mtf.git
+$ git checkout master
 $ cd nestjs-mtf
 $ npm install
 ```
