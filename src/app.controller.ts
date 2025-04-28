@@ -4,7 +4,10 @@ import { StocksService } from './stocksservice/stocksprovider.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService, private stocksService: StocksService) {}
+  constructor(
+    private readonly appService: AppService,
+    private stocksService: StocksService,
+  ) {}
 
   @Get()
   getHello(): string {
@@ -20,8 +23,7 @@ export class AppController {
   //@Get('stockDailyData')
   @Get('stockDailyData/:ticker')
   async getStockData(@Param('ticker') ticker: string): Promise<string> {
-  return this.stocksService.getStockData(ticker);
-  
+    console.log('This API function has been called');
+    return this.stocksService.getStockData(ticker);
   }
 }
-//getstockData():string {
